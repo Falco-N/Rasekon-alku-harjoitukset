@@ -13,37 +13,53 @@ namespace raseko_exersize1
         int age = 30;
         string gender = "Maaster";
 
-        // no arguments
-        Hooman()
+        // Deafult constructor w/o arguments
+        //No need to define, will be created automatically
+        public Hooman()
         {
 
         }
 
         // Constructor with one argument
-        Hooman(string name)
+        public Hooman(string name)
         {
             this.name = name;
         }
 
-        // Constructor with 2 arguments
-        Hooman(string name, int age) 
+        // Constructor with two arguments
+        public Hooman(string name, int age) 
         {
             this.name = name;
             this.age = age;
         }
 
-        // 3 arguments
-        Hooman(string name, int age, string gender)
+        // Constructor with three arguments
+        public Hooman(string name, int age, string gender)
         {
             this.name = name;
             this.age = age;
             this.gender = gender;
         }
+
+        // A method to say something
+        public void SayOpinion()
+        {
+            Console.WriteLine("The Pets are The Maasters.");
+        }
     }
     internal class Program
     {
         static void Main(string[] args)
-        {
+        {   
+            // Create (instantiate) a hooman object from Hooman class
+            Hooman owner = new Hooman("Ozzy Owner", 35, "Misstress");
+            
+            // Call the SayOpinion method
+            owner.SayOpinion();
+
+            // Keep the window open until Enter is pressed
+            Console.ReadLine();
+
         }
     }
 }
