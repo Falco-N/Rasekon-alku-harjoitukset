@@ -9,9 +9,9 @@ namespace raseko_exersize1
     class Hooman
     {
         // Define properties of Hooman
-        string name = "Ex Exaple";
-        int age = 30;
-        string gender = "Maaster";
+        public string name = "Ex Exaple";
+        public int age = 30;
+        public string gender = "Maaster";
 
         // Deafult constructor w/o arguments
         //No need to define, will be created automatically
@@ -52,12 +52,17 @@ namespace raseko_exersize1
         static void Main(string[] args)
         {   
             // Create (instantiate) a hooman object from Hooman class
-            Hooman owner = new Hooman("Ozzy Owner", 35, "Misstress");
+            Hooman owner = new Hooman("Ozzy Ownersson", 35, "Misstress");
             
             // Call the SayOpinion method
             owner.SayOpinion();
 
             // Keep the window open until Enter is pressed
+
+            string who = owner.name;
+
+            Console.WriteLine("Said " + who);
+
             Console.ReadLine();
 
         }
