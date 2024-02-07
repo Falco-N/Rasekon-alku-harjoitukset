@@ -47,6 +47,21 @@ namespace raseko_exersize1
             Console.WriteLine("The Pets are The Maasters.");
         }
     }
+    class CatOwner : Hooman
+    {
+        public new void SayOpinion()
+        {
+            Console.WriteLine("Cats own You.");
+        }
+    }
+    // sub class inherits parent class via dots
+    class DogOwner : Hooman
+    {
+        public new void SayOpinion()
+        {
+            Console.WriteLine("Dogs own everything You do.");
+        }
+    }
     internal class Program
     {
         static void Main(string[] args)
@@ -57,12 +72,20 @@ namespace raseko_exersize1
             // Call the SayOpinion method
             owner.SayOpinion();
 
-            // Keep the window open until Enter is pressed
-
             string who = owner.name;
 
             Console.WriteLine("Said " + who);
 
+            // Create a new catowner object
+            CatOwner catOwner = new CatOwner();
+
+            // Use catowners SayOpinion method
+            catOwner.SayOpinion();
+
+            DogOwner dogOwner = new DogOwner();
+            dogOwner.SayOpinion();
+
+            // Keep the window open until Enter is pressed
             Console.ReadLine();
 
         }
