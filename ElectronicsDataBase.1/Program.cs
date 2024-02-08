@@ -10,7 +10,7 @@ namespace ElectronicsDataBase._1
     class Electronics
     {
         string name = "EXPhone";
-        string BuyDate = "00.00.0000";
+        string BuyDate = "D.M.Y";
         double Price = 00.00;
         int WarrantyPeriodMonths = 000;
 
@@ -18,19 +18,25 @@ namespace ElectronicsDataBase._1
     }
 
     // Sub Classes
-    class Phone
+    class Phone : Electronics
     {
-
+        // Add type (android/ios/win), maker, memory 
     }
 
-    class Tablet
+    class Tablet : Electronics
     {
-
+        // Add type (android/ios/win), maker, memory
     }
 
-    class Computer
+    class Computer : Electronics
     {
+        // Add type (stationary/laptop/touchpad), maker, parameters (windows/linux/mac), memory, extras (paid programs)
+    }
 
+    // All additives (headset/mouse/keyboard/webcam/screen)
+    class Peripherals : Electronics
+    {
+        // Add type (function), belonging, maker
     }
 
     internal class Program
